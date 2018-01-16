@@ -28,7 +28,6 @@
                     {{ $my_menu }}
             </div>
 
-
         </div>
     </nav>
 
