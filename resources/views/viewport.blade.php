@@ -25,8 +25,13 @@
 
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    {{ $my_menu }}
-            </div>
+                <ul class="navbar-nav mr-auto">
+                    @foreach($pages_menu as $menu_item)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('pages',$menu_item->slug)}}">{{$menu_item->title}}</a>
+                        </li>
+                    @endforeach
+                </div>
 
         </div>
     </nav>
