@@ -8,4 +8,4 @@
 - php artisan key:generate
 - php artisan vendor:publish
 - php artisan voyager:install
-- расскомментировать всё в методе boot(0
+- расскомментировать всё в методе boot()
