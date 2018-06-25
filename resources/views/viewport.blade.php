@@ -13,6 +13,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
+
 </head>
 <body>
 
@@ -41,10 +42,35 @@
         </div>
     </nav>
 
+    <div id="carouselExampleSlidesOnly" class="carousel2 slide" data-ride="carousel">
+        <div class="carousel-inner">
+            @foreach($slides as $slide)
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{url('storage/'.$slide->img)}}" alt="{{$slide->title}}">
+                </div>
+            @endforeach
+        </div>
+    </div>
+
 <div class="container">
 
 
-        @yield('content')
+
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="categories">
+                <div class="categories-title">Категроии:</div>
+                @include('categories.tree',['categories'=> $categories])
+            </div>
+        </div>
+
+        <div class="col-sm-9">
+            @yield('content')
+        </div>
+    </div>
+
+
 
 
 
@@ -52,7 +78,11 @@
 
 <!-- Scripts -->
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+
+    <script !src="">
+        $('.carousel').carousel()
+    </script>
 
 </body>
 </html>
