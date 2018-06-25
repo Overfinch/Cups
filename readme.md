@@ -1,11 +1,9 @@
 
 ## About Laravel
 
-- закомментировать всё в методе boot() в AppServiceProvider
-- composer update
+- закомментировать всё кроме Schema::defaultStringLength(191) в методе boot() в AppServiceProvider
 - заполнить .env 
-- добавть Schema::defaultStringLength(191); в метод boot() в AppServiceProvider
-(и закомментировать всё остальное в методе boot())
+- composer update
 - php artisan key:generate
 - php artisan vendor:publish
 - php artisan voyager:install --with-dummy
